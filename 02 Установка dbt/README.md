@@ -54,6 +54,11 @@ git clone https://github.com/amelinvladimir/dbt_course.git
 #### Шаг 2. Выполнить команду запуска образа
 
 ````console
+docker run --name dbt-course-postgres -e POSTGRES_PASSWORD=mysecretpassword -p 4001:5432 -d amelinvd/dbt_course_postgres_db_multiplatform
+````
+
+Запасной, если первый не сработает:
+````console
 docker run --name dbt-course-postgres -e POSTGRES_PASSWORD=mysecretpassword -p 4001:5432 -d amelinvd/dbt_course_postgres_db
 ````
 
